@@ -1,0 +1,8 @@
+.example2 {
+  border: 1px solid rgb(231, 231, 231);
+  background-image: url("./../images/img_flwr.gif"),
+    url("./../images/paper.gif");
+  background-position: right bottom, left top;
+  background-repeat: no-repeat, repeat;
+  padding: 15px;
+}

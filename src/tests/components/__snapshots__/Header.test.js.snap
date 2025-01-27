@@ -1,0 +1,186 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`testing the rendering of Header Component 1`] = `
+<div
+  className="navbar"
+>
+  <NavLink
+    exact={true}
+    style={
+      Object {
+        "backgroundColor": "rgba(225, 110, 28, 0.91)",
+      }
+    }
+    to="/"
+  >
+     
+    <FontAwesomeIcon
+      border={false}
+      className=""
+      fixedWidth={false}
+      flip={null}
+      icon="lightbulb"
+      inverse={false}
+      listItem={false}
+      mask={null}
+      pull={null}
+      pulse={false}
+      rotation={null}
+      size="1x"
+      spin={false}
+      swapOpacity={false}
+      symbol={false}
+      title=""
+      transform={null}
+    />
+     Central Hiring System
+     
+    <FontAwesomeIcon
+      border={false}
+      className=""
+      fixedWidth={false}
+      flip={null}
+      icon="lightbulb"
+      inverse={false}
+      listItem={false}
+      mask={null}
+      pull={null}
+      pulse={false}
+      rotation={null}
+      size="1x"
+      spin={false}
+      swapOpacity={false}
+      symbol={false}
+      title=""
+      transform={null}
+    />
+  </NavLink>
+  <NavLink
+    activeStyle={
+      Object {
+        "color": "white",
+        "fontWeight": "bold",
+      }
+    }
+    to="/home"
+  >
+    <FontAwesomeIcon
+      border={false}
+      className=""
+      fixedWidth={false}
+      flip={null}
+      icon="home"
+      inverse={false}
+      listItem={false}
+      mask={null}
+      pull={null}
+      pulse={false}
+      rotation={null}
+      size={null}
+      spin={false}
+      swapOpacity={false}
+      symbol={false}
+      title=""
+      transform={null}
+    />
+     Home
+  </NavLink>
+  <NavLink
+    activeStyle={
+      Object {
+        "color": "white",
+        "fontWeight": "bold",
+      }
+    }
+    to="/support"
+  >
+    <FontAwesomeIcon
+      border={false}
+      className=""
+      fixedWidth={false}
+      flip={null}
+      icon="info"
+      inverse={false}
+      listItem={false}
+      mask={null}
+      pull={null}
+      pulse={false}
+      rotation={null}
+      size={null}
+      spin={false}
+      swapOpacity={false}
+      symbol={false}
+      title=""
+      transform={null}
+    />
+     support
+  </NavLink>
+  <NavLink
+    activeStyle={
+      Object {
+        "color": "white",
+        "fontWeight": "bold",
+      }
+    }
+    to="/help"
+  >
+    <FontAwesomeIcon
+      activeStyle={
+        Object {
+          "color": "white",
+          "fontWeight": "bold",
+        }
+      }
+      border={false}
+      className=""
+      fixedWidth={false}
+      flip={null}
+      icon="hands-helping"
+      inverse={false}
+      listItem={false}
+      mask={null}
+      pull={null}
+      pulse={false}
+      rotation={null}
+      size={null}
+      spin={false}
+      swapOpacity={false}
+      symbol={false}
+      title=""
+      transform={null}
+    />
+     
+    Help
+  </NavLink>
+  <NavLink
+    style={
+      Object {
+        "float": "right",
+      }
+    }
+    to="/user"
+  >
+    <FontAwesomeIcon
+      border={false}
+      className=""
+      fixedWidth={false}
+      flip={null}
+      icon="user"
+      inverse={false}
+      listItem={false}
+      mask={null}
+      pull={null}
+      pulse={false}
+      rotation={null}
+      size={null}
+      spin={false}
+      swapOpacity={false}
+      symbol={false}
+      title=""
+      transform={null}
+    />
+      
+     Hi 
+  </NavLink>
+</div>
+`;

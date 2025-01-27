@@ -1,0 +1,46 @@
+.container {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: rgb(3, 3, 3);
+}
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.chart-container {
+  width: 50%;
+  float: left;
+  /* background-color: blue; */
+}
+
+.chart1-container {
+  width: 50%;
+  position: relative;
+  border-radius: 20%;
+  /* float: left; */
+  /* background-color: darksalmon; */
+}
+
+/* .search-container {
+  /* width: 100%; */
+/* background-color: rgb(241, 229, 189); */
+/* } */
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.column {
+  float: left;
+  width: 50%;
+  padding: 10px;
+}
+
+.btn:hover {
+  background-color: #ddd;
+}

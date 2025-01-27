@@ -1,0 +1,28 @@
+.supportcenter {
+  display: block;
+  margin-left: 40%;
+  margin-right: 50%;
+  width: 20%;
+}
+
+.supportAlignInfo {
+  padding-left: 20%;
+}
+
+.supportAlignImg {
+  padding-left: 30%;
+  width: 30%;
+  height: 30%;
+}
+
+.support-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  flex-grow: 1;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  margin-top: 50px;
+  margin-bottom: 250px;
+}

@@ -1,0 +1,47 @@
+.mui-model {
+  justify-content: center;
+  /* position:absolute; */
+  display: flex;
+  align-items: center;
+  overflow: auto;
+  top: 10%;
+  left: 10%;
+}
+
+.mui-model-header {
+  padding: 1px 0;
+  border-bottom: 1px solid darkgrey;
+}
+
+.mui-model-footer {
+  padding: 10px 0;
+  border-bottom: 1px solid darkgrey;
+}
+
+.mui-model-content {
+  padding: 12;
+  overflow: "scroll";
+}
+
+.mui-model-old {
+  position: absolute;
+  top: 10%;
+  left: 10%;
+  overflow: scroll;
+  height: 100%;
+  display: "block";
+}
+
+.mui-paper {
+  background-color: whitesmoke;
+  border: 2px solid #000;
+  box-shadow: 10px;
+  padding: 10px;
+  width: 60%;
+}
+
+.candidate-align {
+  width: "40%";
+  padding-right: 20px;
+  padding-left: 20px;
+}

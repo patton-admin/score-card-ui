@@ -1,0 +1,249 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`testing the AppRouter No User loggedin is false 1`] = `
+<Router
+  history={
+    Object {
+      "action": "POP",
+      "block": [Function],
+      "createHref": [Function],
+      "go": [Function],
+      "goBack": [Function],
+      "goForward": [Function],
+      "length": 1,
+      "listen": [Function],
+      "location": Object {
+        "hash": "",
+        "pathname": "/",
+        "search": "",
+        "state": undefined,
+      },
+      "push": [Function],
+      "replace": [Function],
+    }
+  }
+>
+  <div>
+    <Switch>
+      <Route
+        component={
+          Object {
+            "$$typeof": Symbol(react.memo),
+            "WrappedComponent": [Function],
+            "compare": null,
+            "displayName": "Connect(Login)",
+            "type": [Function],
+          }
+        }
+        exact={true}
+        path="/login"
+      />
+    </Switch>
+  </div>
+</Router>
+`;
+
+exports[`testing the AppRouter for Admin/Users view is true 1`] = `
+<Router
+  history={
+    Object {
+      "action": "POP",
+      "block": [Function],
+      "createHref": [Function],
+      "go": [Function],
+      "goBack": [Function],
+      "goForward": [Function],
+      "length": 1,
+      "listen": [Function],
+      "location": Object {
+        "hash": "",
+        "pathname": "/",
+        "search": "",
+        "state": undefined,
+      },
+      "push": [Function],
+      "replace": [Function],
+    }
+  }
+>
+  <div>
+    <Header />
+    <Switch>
+      <Route
+        component={
+          Object {
+            "$$typeof": Symbol(react.memo),
+            "WrappedComponent": [Function],
+            "compare": null,
+            "displayName": "Connect(Login)",
+            "type": [Function],
+          }
+        }
+        exact={true}
+        path="/login"
+      />
+      <Route
+        component={
+          Object {
+            "$$typeof": Symbol(react.memo),
+            "WrappedComponent": [Function],
+            "compare": null,
+            "displayName": "Connect(Home)",
+            "type": [Function],
+          }
+        }
+        path="/home"
+      />
+      <Route
+        component={[Function]}
+        path="/joborders"
+      />
+      <Route
+        component={[Function]}
+        path="/mybucket"
+      />
+      <Route
+        component={[Function]}
+        path="/globalBucket"
+      />
+      <Route
+        component={[Function]}
+        path="/help"
+      />
+      <Route
+        component={[Function]}
+        path="/support"
+      />
+      <Route
+        component={[Function]}
+      />
+    </Switch>
+  </div>
+</Router>
+`;
+
+exports[`testing the AppRouter for SuperAdmin View... 1`] = `
+<Router
+  history={
+    Object {
+      "action": "POP",
+      "block": [Function],
+      "createHref": [Function],
+      "go": [Function],
+      "goBack": [Function],
+      "goForward": [Function],
+      "length": 1,
+      "listen": [Function],
+      "location": Object {
+        "hash": "",
+        "pathname": "/",
+        "search": "",
+        "state": undefined,
+      },
+      "push": [Function],
+      "replace": [Function],
+    }
+  }
+>
+  <div>
+    <Header />
+    <Switch>
+      <Route
+        component={
+          Object {
+            "$$typeof": Symbol(react.memo),
+            "WrappedComponent": [Function],
+            "compare": null,
+            "displayName": "Connect(Login)",
+            "type": [Function],
+          }
+        }
+        exact={true}
+        path="/login"
+      />
+      <Route
+        component={
+          Object {
+            "$$typeof": Symbol(react.memo),
+            "WrappedComponent": [Function],
+            "compare": null,
+            "displayName": "Connect(Home)",
+            "type": [Function],
+          }
+        }
+        path="/home"
+      />
+      <Route
+        component={[Function]}
+        path="/usrMngmt"
+      />
+      <Route
+        component={[Function]}
+        path="/joborders"
+      />
+      <Route
+        component={[Function]}
+        path="/mybucket"
+      />
+      <Route
+        component={[Function]}
+        path="/globalBucket"
+      />
+      <Route
+        component={[Function]}
+        path="/help"
+      />
+      <Route
+        component={[Function]}
+        path="/support"
+      />
+      <Route
+        component={[Function]}
+      />
+    </Switch>
+  </div>
+</Router>
+`;
+
+exports[`testing the AppRouter when IsLoggedIn is not passed 1`] = `
+<Router
+  history={
+    Object {
+      "action": "POP",
+      "block": [Function],
+      "createHref": [Function],
+      "go": [Function],
+      "goBack": [Function],
+      "goForward": [Function],
+      "length": 1,
+      "listen": [Function],
+      "location": Object {
+        "hash": "",
+        "pathname": "/",
+        "search": "",
+        "state": undefined,
+      },
+      "push": [Function],
+      "replace": [Function],
+    }
+  }
+>
+  <div>
+    <Switch>
+      <Route
+        component={
+          Object {
+            "$$typeof": Symbol(react.memo),
+            "WrappedComponent": [Function],
+            "compare": null,
+            "displayName": "Connect(Login)",
+            "type": [Function],
+          }
+        }
+        exact={true}
+        path="/login"
+      />
+    </Switch>
+  </div>
+</Router>
+`;

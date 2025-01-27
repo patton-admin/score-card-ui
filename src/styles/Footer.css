@@ -1,0 +1,50 @@
+.section-footer {
+  position: fixed;
+  left: 0;
+  bottom: -27px;
+  width: 100%;
+  text-align: center;
+}
+
+.p-footer {
+  text-align: center;
+  width: 100%;
+  height: 50px;
+  line-height: 16px;
+  background-color: #0d0d0d;
+  position: relative;
+  top: -2px;
+}
+
+.a-footer {
+  color: #15b5ea;
+  display: inline;
+}
+
+.span-footer {
+  font-size: 14px;
+  position: absolute;
+  bottom: 17px;
+  left: 50%;
+  z-index: 0;
+  line-height: 12px;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+  color: #fff;
+  width: 90%;
+}
+
+/*Scroller css*/
+.scoller-footer-btn {
+  position: fixed;
+  /* border-radius: 50%; */
+  bottom: 10px;
+  right: 20px;
+  z-index: 17;
+  background-color: #0b0c0b;
+  border: none;
+  color: white;
+  padding: 9px;
+  cursor: pointer;
+}
