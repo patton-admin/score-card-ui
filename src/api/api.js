@@ -8,8 +8,7 @@ import { store } from "./../index";
 // const api =
 //   process.env.REACT_APP_API_URL ||
 //   "http://pattonapp-env.eba-gumwmwmm.us-east-2.elasticbeanstalk.com/chms";
-const api =
-  "http://ec2-3-135-229-93.us-east-2.compute.amazonaws.com:5001/chms";
+const api = "http://ec2-3-135-229-93.us-east-2.compute.amazonaws.com:5001/chms";
 // process.env.REACT_APP_API_URL;
 
 export const login = (options) => {
@@ -97,7 +96,7 @@ export const deleteBucketApi = (data) => {
 //getting joborder to the application...
 
 export const getAllJobOrders = (options) => {
-  options.url = `${api}/allJobOrders`;
+  options.url = `https://pn6rvxfj5c.execute-api.us-east-1.amazonaws.com/dev/test`;
   return axios(options);
 };
 
@@ -132,8 +131,22 @@ export const deleteJobApi = (data) => {
 
 //getting candidates to the application...
 export const getAllCandidates = (options) => {
-  options.url = `${api}/allLeads`;
-  return axios(options);
+  const api = `https://pn6rvxfj5c.execute-api.us-east-1.amazonaws.com/dev/score/v1`;
+  options.url = `${api}`;
+  return axios
+    .post(`${api}`, {
+      type: "getRecByName",
+      timePeriod: "2024",
+      recruiterName: "Mark Antony",
+    })
+    .then((response) => {
+      const { status, data } = response;
+      console.log("response...", data);
+      return { status, data: data.body };
+    })
+    .catch(function (error) {
+      console.log(error);
+    });
 };
 
 //adding candidates to the application...
