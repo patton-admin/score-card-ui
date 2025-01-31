@@ -351,121 +351,18 @@ const Dashboard = ({ availableBuckets, sendMsg, dataFeed, dataFeedLead }) => {
           </Button>
         </span>
       </form>
-
       <div className="clearfix"></div>
-
       <div className="row">
-        {/* <div
-            className="column"
-            style={{
-              backgroundColor: "#000000",
-              position: "relative",
-              width: "50%",
-              paddingRight: "10px",
-            }}
-          >
-            <h2>Job Order Status</h2>
-            <p>High Level Info...</p>
-             <Line data={data} /> 
-          </div> */}
-
-        {/* <div
-            className="column"
-            style={{ backgroundColor: "#000000", width: "50%" }}
-          >
-            <h2>Lead Status</h2>
-            <p>High Level Info...</p>
-            <Doughnut data={data1} />
-          </div>
-        </div> */}
-
-        {/* do not delete this... */}
         <div className="row">
-          {/* <div
-            className="column"
-            style={{
-              backgroundColor: "#000000",
-              position: "relative",
-              width: "50%",
-              paddingRight: "10px",
-            }}
-          >
-            <h2>Job Order Status</h2>
-            <p>High Level Info...</p>
-            <Line data={data} />
-          </div>
-          <div
-            className="column"
-            style={{ backgroundColor: "#000000", width: "50%" }}
-          >
-            <h2>Lead Status</h2>
-            <p>High Level Info...</p>
-            <Doughnut data={data1} />
-          </div> */}
-          <DashboardTabs
+          {/* <DashboardTabs
             chartData={chartData}
             chartLeadData={chartLeadData}
             columnFeed={columnFeed}
             columnFeedLead={columnFeedLead}
-          />
+          /> */}
           <br></br>
         </div>
-
-        {/* <div className="clearfix"></div>
-        <div className="row" style={{ width: "50%" }}>
-          <div
-            className="column"
-            style={{ backgroundColor: "#ccc", width: "50%" }}
-          >
-            <h2>Column 3</h2>
-            <p>Some text..</p>
-            <h2 style={{ paddingLeft: "189px", paddingTop: "4px" }}>
-              Leads Submission
-            </h2>
-            <Doughnut data={data1} />
-          </div>
-          <div
-            className="column"
-            style={{ backgroundColor: "#ddd", width: "50%" }}
-          >
-            <h2>Column 4</h2>
-            <p>Some text..</p>
-            <h2 style={{ paddingLeft: "189px", paddingTop: "4px" }}>
-              Leads Submission
-            </h2>
-            <Doughnut data={data1} />
-          </div>
-        </div> */}
-
-        {/* <div className="column">
-          <div>
-            <div style={{ backgroundColor: "black" }}>
-              <h2 style={{ paddingLeft: "189px", paddingTop: "7px" }}>
-                Job Order Status
-              </h2>
-              <Line data={data} />
-            </div>
-          </div>
-
-          <div style={{ backgroundColor: "black" }}>
-            <h2 style={{ paddingLeft: "189px", paddingTop: "4px" }}>
-              Leads Submission
-            </h2>
-            <Doughnut data={data1} />
-          </div>
-        </div> */}
-        {/* <div className="clearfix"></div> */}
-        {/* <div className="clearfix"></div> */}
       </div>
-      {/* <div className="container search-container">
-        {/* <Table
-          title={"Client"}
-          toolbarEnable={"Client"}
-          columnFeed={columnFeed}
-          dataFeed={dataFeed}
-          hiddenColumns={["vendorEmail", "vendorContactPerson"]}
-        /> 
-      </div> */}
     </div>
   );
 };

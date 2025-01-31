@@ -18,41 +18,37 @@ const Lead = (props) => {
   }, []);
 
   const columnFeed = [
-    // {
-    //   Header: "Lead Id",
-    //   accessor: "id",
-    // },
     {
-      Header: "FirstName",
-      accessor: "leadFirstName",
+      Header: "RecruiterName",
+      accessor: "recruiterName",
     },
     {
-      Header: "LastName",
-      accessor: "leadLastName",
+      Header: "Team",
+      accessor: "team",
     },
     {
-      Header: "Phone",
+      Header: "day",
       accessor: "leadPhone",
     },
     {
-      Header: "Practice Area",
-      accessor: "leadPracticeArea",
+      Header: "Expected Interviews",
+      accessor: "expectedInterviews",
     },
     {
-      Header: "Salary",
-      accessor: "leadSalary",
+      Header: "Achieved Interviews",
+      accessor: "achievedInterviews",
     },
     {
-      Header: "Visa",
-      accessor: "leadVisaType",
+      Header: "Comments",
+      accessor: "comments",
     },
     {
-      Header: "State",
-      accessor: "leadState",
+      Header: "PK",
+      accessor: "PK",
     },
     {
-      Header: "Bucket",
-      accessor: "bucket.bucketName",
+      Header: "SK",
+      accessor: "SK",
     },
   ];
 
@@ -64,25 +60,13 @@ const Lead = (props) => {
         marginRight: "25px",
       }}
     >
-      <h2 style={{ fontSize: "17px", paddingLeft: "11px" }}>Global Leads</h2>
+      <h2 style={{ fontSize: "17px", paddingLeft: "11px" }}>Score Card</h2>
       <Table
-        title={"Lead"}
-        toolbarEnable={"Lead"}
+        title={"Score Card"}
+        toolbarEnable={"Score Card"}
         columnFeed={columnFeed}
         dataFeed={candidates}
-        hiddenColumns={[
-          "leadEmpName",
-          "leadSecondaryEmail",
-          "leadExpectedSalary",
-          "leadEmpName",
-          "leadPrefLoc",
-          // "leadLastName",
-          // "leadPracticeArea",
-          "submittedJobId",
-          "leadStatus",
-          "leadNotes",
-          "bucketId",
-        ]}
+        hiddenColumns={["PK", "SK"]}
       />
       <div>
         <p> </p>

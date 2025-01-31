@@ -25,36 +25,28 @@ const MyLead = (props) => {
     //   accessor: "id",
     // },
     {
-      Header: "FirstName",
-      accessor: "leadFirstName",
+      Header: "RecruiterName",
+      accessor: "recruiterName",
     },
     {
-      Header: "LastName",
-      accessor: "leadLastName",
+      Header: "Team",
+      accessor: "team",
     },
     {
-      Header: "Phone",
+      Header: "day",
       accessor: "leadPhone",
     },
     {
-      Header: "Practice Area",
-      accessor: "leadPracticeArea",
+      Header: "Expected Interviews",
+      accessor: "expectedInterviews",
     },
     {
-      Header: "Salary",
-      accessor: "leadSalary",
+      Header: "Achieved Interviews",
+      accessor: "achievedInterviews",
     },
     {
-      Header: "Visa",
-      accessor: "leadVisaType",
-    },
-    {
-      Header: "State",
-      accessor: "leadState",
-    },
-    {
-      Header: "Bucket",
-      accessor: "bucket.bucketName",
+      Header: "Comments",
+      accessor: "comments",
     },
   ];
 
@@ -73,19 +65,7 @@ const MyLead = (props) => {
           toolbarEnable={"Lead"}
           columnFeed={columnFeed}
           dataFeed={myLead}
-          hiddenColumns={[
-            // "leadLastName",
-            "leadEmpName",
-            "leadSecondaryEmail",
-            "leadExpectedSalary",
-            "leadEmpName",
-            "leadPrefLoc",
-            // "leadPracticeArea",
-            "submittedJobId",
-            "leadStatus",
-            "leadNotes",
-            "bucketId",
-          ]}
+          hiddenColumns={[]}
         />
         <div>
           <p> </p>

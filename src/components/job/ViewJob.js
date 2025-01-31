@@ -11,7 +11,7 @@ const ViewJob = (props) => {
   const [jobs, setJobs] = useState(dataFeed);
 
   useEffect(() => {
-    setJobs(dataFeed);
+    setJobs([]);
   }, [dataFeed]);
 
   useEffect(() => {
@@ -99,14 +99,15 @@ const ViewJob = (props) => {
 
 const mapStateToProps = (state) => {
   return {
-    dataFeed: getJobData(state),
+    dataFeed: [],
+    // dataFeed: getJobData(state),
   };
 };
 
 const mapDispatchToProps = (dispatch) => {
   return {
     sendMsg: () => {
-      dispatch(getAllJob());
+      // dispatch(getAllJob());
     },
   };
 };

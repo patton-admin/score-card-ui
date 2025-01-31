@@ -35,12 +35,21 @@ const Header = (props) => (
     </NavLink>
 
     <NavLink
-      to="/mybucket"
+      to="/dashboard"
       activeStyle={{
         color: "#15b5ea",
       }}
     >
-      <FontAwesomeIcon icon="shopping-cart" /> My Bucket
+      <FontAwesomeIcon icon="home" /> Dashboard
+    </NavLink>
+
+    <NavLink
+      to="/jobOrders"
+      activeStyle={{
+        color: "#15b5ea",
+      }}
+    >
+      <FontAwesomeIcon icon="shopping-cart" /> Job Orders
     </NavLink>
 
     <NavLink
@@ -49,25 +58,7 @@ const Header = (props) => (
         color: "#15b5ea",
       }}
     >
-      <FontAwesomeIcon icon="globe-americas" /> Global Buckets
-    </NavLink>
-
-    <NavLink
-      to="/client"
-      activeStyle={{
-        color: "#15b5ea",
-      }}
-    >
-      <FontAwesomeIcon icon="heartbeat" /> Clients
-    </NavLink>
-
-    <NavLink
-      to="/joborders"
-      activeStyle={{
-        color: "#15b5ea",
-      }}
-    >
-      <FontAwesomeIcon icon="fire" /> Hot-Orders
+      <FontAwesomeIcon icon="globe-americas" /> Score Card
     </NavLink>
 
     {/* <NavLink

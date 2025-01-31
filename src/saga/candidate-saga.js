@@ -18,8 +18,8 @@ import { DELETE_CANDIDATE } from "../actions/action";
 export function* getAllCandidateEffect() {
   try {
     const { status, data } = yield call(getAllCandidates, { method: "get" });
-    if (status === 200 && data !== undefined) {
-      yield put(viewCandidateSuccess(data));
+    if (status === 200 && data !== undefined && data.data) {
+      yield put(viewCandidateSuccess(data.data));
     } else {
       yield put(viewCandidateFailure());
     }

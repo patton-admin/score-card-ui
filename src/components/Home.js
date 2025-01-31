@@ -82,149 +82,12 @@ const Home = ({ sendMsg, visibleUser, role }) => {
             Please check with your Supervisor to get access
           </Alert>
         )}
-        <div className="grid-box">
-          <a
-            style={{ textDecoration: "none" }}
-            onClick={() => {
-              redirect("Admin");
-            }}
-          >
-            <p className="grid-img-align">
-              <FontAwesomeIcon icon="user-cog" color="chocolate" size="3x" />
-            </p>
-            <p></p>
-            <label className="grid-label" style={{ paddingLeft: "10px" }}>
-              User Management
-            </label>
-            <p></p>
-            <label className="grid-label-g" style={{ paddingLeft: "47px" }}>
-              Create Users
-            </label>
-            <p></p>
-          </a>
-        </div>
 
         <div className="grid-box">
           <a
             style={{ textDecoration: "none" }}
             onClick={() => {
-              redirect("hotJobs");
-            }}
-          >
-            <p className="grid-img-align">
-              <FontAwesomeIcon icon="fire" color="red" size="3x" />
-            </p>
-            <p></p>
-            <label className="grid-label" style={{ paddingLeft: "37px" }}>
-              Hot Orders
-            </label>
-            <p></p>
-            <label className="grid-label-g" style={{ paddingLeft: "29px" }}>
-              Create Job Orders{" "}
-            </label>
-          </a>
-        </div>
-
-        <div className="grid-box">
-          <a
-            style={{ textDecoration: "none" }}
-            onClick={() => {
-              redirect("mybucket");
-            }}
-          >
-            <p className="grid-img-align" style={{ paddingLeft: "61px" }}>
-              <FontAwesomeIcon
-                icon="shopping-cart"
-                color="darkcyan"
-                size="3x"
-              />
-            </p>
-            <p></p>
-            <label className="grid-label" style={{ paddingLeft: "35px" }}>
-              My Bucket
-            </label>
-            <p></p>
-            <label className="grid-label-g" style={{ paddingLeft: "37px" }}>
-              My Consultants
-            </label>
-          </a>
-        </div>
-
-        <div className="grid-box">
-          <a
-            style={{ textDecoration: "none" }}
-            onClick={() => {
-              redirect("GlobalBucket");
-            }}
-          >
-            <p className="grid-img-align">
-              <FontAwesomeIcon icon="globe-americas" color="Green" size="3x" />
-            </p>
-            <p></p>
-            <label className="grid-label" style={{ paddingLeft: "27px" }}>
-              Global Buckets
-            </label>
-            <p></p>
-            <label className="grid-label-g" style={{ paddingLeft: "27px" }}>
-              Search Consultants
-            </label>
-          </a>
-        </div>
-
-        <div className="grid-box">
-          <a
-            style={{ textDecoration: "none" }}
-            onClick={() => {
-              redirect("Local");
-            }}
-          >
-            {/* <img alt="image1" className="grid-img-align" src={localBench} /> */}
-            <p className="grid-img-align">
-              <FontAwesomeIcon
-                icon="shopping-bag"
-                color="#002658e8"
-                size="3x"
-              />
-            </p>
-            <p></p>
-            <label className="grid-label" style={{ paddingLeft: "30px" }}>
-              Local Buckets
-            </label>
-            <p></p>
-            <label className="grid-label-g" style={{ paddingLeft: "60px" }}>
-              Citizens
-            </label>
-          </a>
-        </div>
-
-        <div className="grid-box">
-          <a
-            style={{ textDecoration: "none" }}
-            onClick={() => {
-              redirect("Client");
-            }}
-          >
-            <p className="grid-img-align">
-              <FontAwesomeIcon icon="heartbeat" color="red" size="3x" />
-            </p>
-            <p></p>
-            {/* <img alt="image1" className="grid-img-align" src={client} /> */}
-            <p></p>
-            <label className="grid-label" style={{ paddingLeft: "15px" }}>
-              Clients to Handle
-            </label>
-            <p></p>
-            <label className="grid-label-g" style={{ paddingLeft: "15px" }}>
-              Be in touch with Clients
-            </label>
-          </a>
-        </div>
-
-        <div className="grid-box">
-          <a
-            style={{ textDecoration: "none" }}
-            onClick={() => {
-              redirect("Dashboard");
+              // redirect("Dashboard");
             }}
           >
             <p className="grid-img-align">
@@ -248,19 +111,43 @@ const Home = ({ sendMsg, visibleUser, role }) => {
         </div>
 
         <div className="grid-box">
-          <a style={{ textDecoration: "none" }}>
+          <a
+            style={{ textDecoration: "none" }}
+            onClick={() => {
+              // redirect("hotJobs");
+            }}
+          >
             <p className="grid-img-align">
-              <FontAwesomeIcon icon="compass" color="red" size="3x" />
+              <FontAwesomeIcon icon="fire" color="red" size="3x" />
             </p>
             <p></p>
-            {/* <img alt="image1" className="grid-img-align" src={campaign} /> */}
-            <p></p>
-            <label className="grid-label" style={{ paddingLeft: "17px" }}>
-              Email Campaign
+            <label className="grid-label" style={{ paddingLeft: "37px" }}>
+              Job Orders
             </label>
             <p></p>
-            <label className="grid-label-g" style={{ paddingLeft: "10px" }}>
-              No missing conversations
+            <label className="grid-label-g" style={{ paddingLeft: "29px" }}>
+              Create Job Orders{" "}
+            </label>
+          </a>
+        </div>
+
+        <div className="grid-box">
+          <a
+            style={{ textDecoration: "none" }}
+            onClick={() => {
+              redirect("GlobalBucket");
+            }}
+          >
+            <p className="grid-img-align">
+              <FontAwesomeIcon icon="globe-americas" color="Green" size="3x" />
+            </p>
+            <p></p>
+            <label className="grid-label" style={{ paddingLeft: "27px" }}>
+              Score Card
+            </label>
+            <p></p>
+            <label className="grid-label-g" style={{ paddingLeft: "27px" }}>
+              Search Consultants
             </label>
           </a>
         </div>
@@ -281,25 +168,25 @@ const mapDispatchToProps = (dispatch) => {
     sendMsg: (x) => {
       dispatch(viewCandidate());
       dispatch(getAllUser());
-      dispatch(getAllJob());
-      dispatch(viewClient());
-      dispatch(viewBucket());
+      // dispatch(getAllJob());
+      // dispatch(viewClient());
+      // dispatch(viewBucket());
       // dispatch(viewTodo());
       dispatch(viewLov());
-      dispatch(
-        getDashboardData({
-          startDate: startDate,
-          endDate: endDate,
-          bucketId: -1,
-        })
-      );
-      dispatch(
-        getLeadDashboardData({
-          startDate: startDate,
-          endDate: endDate,
-          bucketId: -1,
-        })
-      );
+      // dispatch(
+      //   getDashboardData({
+      //     startDate: startDate,
+      //     endDate: endDate,
+      //     bucketId: -1,
+      //   })
+      // );
+      // dispatch(
+      //   getLeadDashboardData({
+      //     startDate: startDate,
+      //     endDate: endDate,
+      //     bucketId: -1,
+      //   })
+      // );
     },
   };
 };

@@ -62,7 +62,7 @@ const Login = (props) => {
           >
             {({ values, handleChange, handleBlur }) => (
               <Form>
-                <h3 className="patton-img">Patton Tracking System</h3>
+                <h3 className="patton-img">Patton Score Card</h3>
                 <p className="patton-img">
                   <Tooltip title="Patton-Labs" placement="right">
                     <img

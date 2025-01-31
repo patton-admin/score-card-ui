@@ -125,7 +125,7 @@ const TableToolbar = (props) => {
           </Tooltip>
         )}
 
-        {(title === "Lead" || title === "Leads") && (
+        {title === "Score Card" && (
           <AddLeadDialog addHandler={addHandler} title={title} />
         )}
         {title === "User" && (

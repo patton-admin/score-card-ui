@@ -127,36 +127,36 @@ export const getLeadData = (state) => {
   let candidates = state.candidate.candidates;
   let buckets = state.bucket.buckets;
   let { role, dbId } = state.login;
-  let candidate = [];
+  // let candidate = [];
 
-  if (role === "Sadmin") {
-    if (candidates.length > 0) {
-      // console.log("lenght of candiates...", candidates.length);
-      candidates.map((e) => {
-        if (e.bucket !== undefined || e.bucket !== null) {
-          let x = e;
-          x.bucketId = e.bucket["id"];
-          candidate.push(x);
-        }
-      });
-    }
-  } else if (role !== "Sadmin" && role === `BDM`) {
-    //iterate bucket get list of bucket he have access to
-    let bucketAccessList = [];
-    buckets.filter((e) => {
-      if (e.assignedUsers.includes(dbId)) {
-        bucketAccessList.push(e.id);
-      }
-    });
-    let bucketAccessListString = bucketAccessList.join();
-    return candidates.filter((e) => {
-      let bucketId = e.bucket["id"];
-      if (bucketAccessListString.includes(bucketId)) {
-        return candidate.push(e);
-      }
-    });
-  }
-  return candidate;
+  // if (role === "Sadmin") {
+  //   if (candidates.length > 0) {
+  //     // console.log("lenght of candiates...", candidates.length);
+  //     candidates.map((e) => {
+  //       if (e.bucket !== undefined || e.bucket !== null) {
+  //         let x = e;
+  //         x.bucketId = e.bucket["id"];
+  //         candidate.push(x);
+  //       }
+  //     });
+  //   }
+  // } else if (role !== "Sadmin" && role === `BDM`) {
+  //   //iterate bucket get list of bucket he have access to
+  //   let bucketAccessList = [];
+  //   buckets.filter((e) => {
+  //     if (e.assignedUsers.includes(dbId)) {
+  //       bucketAccessList.push(e.id);
+  //     }
+  //   });
+  //   let bucketAccessListString = bucketAccessList.join();
+  //   return candidates.filter((e) => {
+  //     let bucketId = e.bucket["id"];
+  //     if (bucketAccessListString.includes(bucketId)) {
+  //       return candidate.push(e);
+  //     }
+  //   });
+  // }
+  return candidates;
 };
 
 //bucket screen data load

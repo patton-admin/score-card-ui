@@ -77,7 +77,8 @@ const initialLeadValue = {
 };
 
 const salaryRegExp = /^\d+$/;
-const phoneRegExp = /^((\\+[1-9]{1,4}[ \\-]*)|(\\([0-9]{2,3}\\)[ \\-]*)|([0-9]{2,4})[ \\-]*)*?[0-9]{3,4}?[ \\-]*[0-9]{3,4}?$/;
+const phoneRegExp =
+  /^((\\+[1-9]{1,4}[ \\-]*)|(\\([0-9]{2,3}\\)[ \\-]*)|([0-9]{2,4})[ \\-]*)*?[0-9]{3,4}?[ \\-]*[0-9]{3,4}?$/;
 const leadValidationSchema = {
   leadEmail: Yup.string()
     .required("Lead Email is Required")
@@ -205,13 +206,13 @@ const AddInternDialog = (props) => {
 
   return (
     <div>
-      {title !== "Lead" && (
+      {
         <Tooltip title="Add">
           <IconButton size="medium" aria-label="add" onClick={handleClickOpen}>
             <AddIcon />
           </IconButton>
         </Tooltip>
-      )}
+      }
       <Dialog
         open={isOpen}
         onClose={handleClose}
