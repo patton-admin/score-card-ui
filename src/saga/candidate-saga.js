@@ -36,7 +36,7 @@ export function* getAllCandidateWatcher() {
 export function* addCandidateEffect(candidateData) {
   let { candidate } = candidateData;
   try {
-    const { status, data } = yield call(addCandidateApi, candidate);
+    const { status, data } = yield call(addCandidateApi, {...candidate, type: "post"});
     if (status === 200 && data !== undefined) {
       yield put(addCandidateSuccess(data));
       yield put(openModal({ initialVal: {}, isOpen: false }));

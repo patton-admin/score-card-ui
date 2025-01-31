@@ -48,7 +48,7 @@ const Home = ({ sendMsg, visibleUser, role }) => {
     if (input === "Dashboard" && role === "Sadmin") {
       history.push("/dashboard");
     } else {
-      setLocalMessage(true);
+      // setLocalMessage(true);
     }
     if (input === "Client") {
       history.push("/client");
@@ -87,7 +87,7 @@ const Home = ({ sendMsg, visibleUser, role }) => {
           <a
             style={{ textDecoration: "none" }}
             onClick={() => {
-              // redirect("Dashboard");
+              redirect("Dashboard");
             }}
           >
             <p className="grid-img-align">
@@ -114,7 +114,7 @@ const Home = ({ sendMsg, visibleUser, role }) => {
           <a
             style={{ textDecoration: "none" }}
             onClick={() => {
-              // redirect("hotJobs");
+              redirect("hotJobs");
             }}
           >
             <p className="grid-img-align">

@@ -76,66 +76,21 @@ const initialLeadValue = {
   totalExp: 0,
 };
 
-const salaryRegExp = /^\d+$/;
-const phoneRegExp =
-  /^((\\+[1-9]{1,4}[ \\-]*)|(\\([0-9]{2,3}\\)[ \\-]*)|([0-9]{2,4})[ \\-]*)*?[0-9]{3,4}?[ \\-]*[0-9]{3,4}?$/;
+
 const leadValidationSchema = {
-  leadEmail: Yup.string()
-    .required("Lead Email is Required")
-    .max(50, "Not More than 50ch"),
-  leadPhone: Yup.string()
-    .matches(phoneRegExp, "Phone number is not valid")
-    .max(14, "Phone number is not valid")
-    .required("Lead Phone is required"),
-  bucketId: Yup.number().required("Bucket is required"),
-  leadFirstName: Yup.string()
+
+  recruiterName: Yup.string()
     .max(25, "Not More than 25")
     .required("First Name is required"),
-  leadLastName: Yup.string()
-    .max(25, "Not More than 25")
-    .required("Last Name is required"),
-  leadPrimaryEmail: Yup.string().nullable().max(50, "Not More than 50ch"),
-  leadSecondaryEmail: Yup.string().max(50, "Not More than 50ch").nullable(),
-  leadAddress: Yup.string().max(300, "Not More than 300ch").nullable(),
-  leadState: Yup.string()
-    .max(15, "Not More than 15ch")
-    .required("State is required"),
-  leadCity: Yup.string().max(20, "Not More than 20ch").nullable(),
-  leadEmpName: Yup.string().max(20, "Not More than 20ch").nullable(),
-  leadJobTitle: Yup.string().max(100, "Not More than 100ch").nullable(),
-  leadSalary: Yup.string()
-    .matches(salaryRegExp, "Salary is not valid")
-    .min(4, "Not Less than 4")
-    .max(6, "Not More than 6")
-    .required("Current Salary is required"),
-  leadExpectedSalary: Yup.string()
-    .matches(salaryRegExp, "Salary is not valid")
-    .min(4, "Not Less than 4")
-    .max(6, "Not More than 6")
-    .required("Expected Salary is required"),
-  leadVisaType: Yup.string().required("Visa Type is required"),
-  leadWlgReLoc: Yup.string().max(1, "Not More than 1ch").nullable(),
-  leadPrefLoc: Yup.string().max(20, "Not More than 20ch").nullable(),
-  leadPracticeArea: Yup.string()
-    .max(40, "Not More than 40ch")
-    .required("Practice Area is required"),
-  leadStatus: Yup.string().required("Lead status is required"),
-  leadResFileName: Yup.string().max(20, "Not More than 20ch").nullable(),
-  leadResPath: Yup.string().max(75, "Not More than 75ch").nullable(),
-  // leadNotes: Yup.string()
-  //   .max(200, "Not More than 200ch")
-  //   .required("Notes is required"),
+  achievedInterviews: Yup.string().max(20, "Not More than 20ch").required(),
+  expectedInterviews: Yup.string().max(20, "Not More than 100ch").required(),
+  day: Yup.date().required("Day is required"),
+  month: Yup.string().required("Month is required"),
+  year: Yup.string().required("Year is required"),
   comments: Yup.string()
     .max(4000, "Not More than 4000ch")
     .required("Comments is required"),
   // leadJobOrderid: Yup.number().n("JobOrder Id is required"),
-  submittedJobId: Yup.string()
-    .required("JobOrder Id is required")
-    .matches(salaryRegExp, "Job Order is not valid"),
-  totalExp: Yup.string()
-    .matches(salaryRegExp, "Experience is not valid")
-    .max(2, "Not More than 2ch")
-    .required("Experience is required"),
 };
 
 const AddInternDialog = (props) => {
@@ -177,13 +132,8 @@ const AddInternDialog = (props) => {
 
   const handleAdd = (value) => {
     console.log("value that are submitted...", value);
-    if (value.hasOwnProperty("id") && value.id !== "") {
-      if (role !== "Sadmin") {
-        let bucket = availableBuckets.filter((e) => userId == e.owner)[0];
-        value.bucketId = bucket["bucketId"];
-      }
-
-      if (value.bucketId !== undefined && value.bucketId !== "SELECT") {
+    if (value.hasOwnProperty("PK") && value.PK !== "") {
+      if (value.team !== undefined && value.team !== "SELECT") {
         dispatch(addCandidate(value));
         let handleProp = {};
         handleProp.isEditing = true;
@@ -192,12 +142,7 @@ const AddInternDialog = (props) => {
         console.log("you have to edit it here...for candidate");
       }
     } else {
-      if (role !== "Sadmin") {
-        let bucket = availableBuckets.filter((e) => userId == e.owner)[0];
-        value.bucketId = bucket["bucketId"];
-      }
-
-      if (value.bucketId !== undefined && value.bucketId !== "SELECT") {
+      if (value.team !== undefined && value.team !== "SELECT") {
         dispatch(addCandidate(value));
         addHandler(value);
       }

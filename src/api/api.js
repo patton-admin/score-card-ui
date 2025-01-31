@@ -152,7 +152,7 @@ export const getAllCandidates = (options) => {
 //adding candidates to the application...
 export const addCandidateApi = (data) => {
   return axios
-    .post(`${api}/addLead`, data)
+    .post(`https://pn6rvxfj5c.execute-api.us-east-1.amazonaws.com/dev/score/v1`, data)
     .then((response) => {
       return response;
     })

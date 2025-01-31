@@ -28,7 +28,7 @@ const Lead = (props) => {
     },
     {
       Header: "day",
-      accessor: "leadPhone",
+      accessor: "day",
     },
     {
       Header: "Expected Interviews",
